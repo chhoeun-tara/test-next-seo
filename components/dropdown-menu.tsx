@@ -113,9 +113,9 @@ const DropdownMenu = (props: DropdownMenuProps) => {
             <DropdownMenuPrimitive.CheckboxItem
               checked={showGrid}
               onCheckedChange={(state) => {
-                if (state?.toString() !== "indeterminate") {
-                  setShowGrid(state);
-                }
+                // if (state?.toString() !== "indeterminate") {
+                //   setShowGrid(state);
+                // }
               }}
               className={clsx(
                 "flex w-full cursor-default select-none items-center rounded-md px-2 py-2 text-xs outline-none",
@@ -138,9 +138,9 @@ const DropdownMenu = (props: DropdownMenuProps) => {
             <DropdownMenuPrimitive.CheckboxItem
               checked={showUi}
               onCheckedChange={(state) => {
-                if (state?.toString() !== "indeterminate") {
-                  setShowUi(state);
-                }
+                // if (state?.toString() !== "indeterminate") {
+                //   setShowUi(state);
+                // }
               }}
               className={clsx(
                 "flex w-full cursor-default select-none items-center rounded-md px-2 py-2 text-xs outline-none",
