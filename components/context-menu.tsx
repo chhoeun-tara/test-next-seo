@@ -106,12 +106,12 @@ const ContextMenu = (props: ContextMenuProps) => {
               </ContextMenuPrimitive.Item>
             ))}
 
-            <ContextMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <ContextMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
             <ContextMenuPrimitive.CheckboxItem
               checked={showGrid}
               onCheckedChange={(state) => {
-                if (state !== "indeterminate") {
+                if (state?.toString() !== "indeterminate") {
                   setShowGrid(state);
                 }
               }}
@@ -121,7 +121,7 @@ const ContextMenu = (props: ContextMenuProps) => {
               )}
             >
               {showGrid ? (
-                <GridIcon className="mr-2 h-4 w-4" />
+                <GridIcon className="w-4 h-4 mr-2" />
               ) : (
                 <TransparencyGridIcon className="mr-2 h-3.5 w-3.5 text-gray-700 dark:text-gray-300" />
               )}
@@ -136,7 +136,7 @@ const ContextMenu = (props: ContextMenuProps) => {
             <ContextMenuPrimitive.CheckboxItem
               checked={showUi}
               onCheckedChange={(state) => {
-                if (state !== "indeterminate") {
+                if (state?.toString() !== "indeterminate") {
                   setShowUi(state);
                 }
               }}
@@ -158,9 +158,9 @@ const ContextMenu = (props: ContextMenuProps) => {
               </ContextMenuPrimitive.ItemIndicator>
             </ContextMenuPrimitive.CheckboxItem>
 
-            <ContextMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <ContextMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
-            <ContextMenuPrimitive.Label className="select-none px-2 py-2 text-xs text-gray-700 dark:text-gray-200">
+            <ContextMenuPrimitive.Label className="px-2 py-2 text-xs text-gray-700 select-none dark:text-gray-200">
               Region Tools
             </ContextMenuPrimitive.Label>
 
@@ -180,7 +180,7 @@ const ContextMenu = (props: ContextMenuProps) => {
               </ContextMenuPrimitive.Item>
             ))}
 
-            <ContextMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <ContextMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
             <ContextMenuPrimitive.Sub>
               <ContextMenuPrimitive.SubTrigger

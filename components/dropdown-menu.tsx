@@ -108,12 +108,12 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               </DropdownMenuPrimitive.Item>
             ))}
 
-            <DropdownMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <DropdownMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
             <DropdownMenuPrimitive.CheckboxItem
               checked={showGrid}
               onCheckedChange={(state) => {
-                if (state !== "indeterminate") {
+                if (state?.toString() !== "indeterminate") {
                   setShowGrid(state);
                 }
               }}
@@ -123,7 +123,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               )}
             >
               {showGrid ? (
-                <GridIcon className="mr-2 h-4 w-4" />
+                <GridIcon className="w-4 h-4 mr-2" />
               ) : (
                 <TransparencyGridIcon className="mr-2 h-3.5 w-3.5 text-gray-700 dark:text-gray-300" />
               )}
@@ -138,7 +138,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
             <DropdownMenuPrimitive.CheckboxItem
               checked={showUi}
               onCheckedChange={(state) => {
-                if (state !== "indeterminate") {
+                if (state?.toString() !== "indeterminate") {
                   setShowUi(state);
                 }
               }}
@@ -160,9 +160,9 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               </DropdownMenuPrimitive.ItemIndicator>
             </DropdownMenuPrimitive.CheckboxItem>
 
-            <DropdownMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <DropdownMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
-            <DropdownMenuPrimitive.Label className="select-none px-2 py-2 text-xs text-gray-700 dark:text-gray-200">
+            <DropdownMenuPrimitive.Label className="px-2 py-2 text-xs text-gray-700 select-none dark:text-gray-200">
               Region Tools
             </DropdownMenuPrimitive.Label>
 
@@ -182,7 +182,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               </DropdownMenuPrimitive.Item>
             ))}
 
-            <DropdownMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <DropdownMenuPrimitive.Separator className="h-px my-1 bg-gray-200 dark:bg-gray-700" />
 
             <DropdownMenuPrimitive.Sub>
               <DropdownMenuPrimitive.SubTrigger
